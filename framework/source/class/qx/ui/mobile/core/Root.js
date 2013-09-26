@@ -38,7 +38,7 @@ qx.Class.define("qx.ui.mobile.core.Root",
    */
   construct : function(root, layout)
   {
-    this.__root = new qx.module.ui.Widget(root || document.body);
+    this.__root = new qx.ui.website.Widget(root || document.body);
     this.base(arguments, layout || new qx.ui.mobile.layout.VBox());
 
     this.addCssClass("mobile");

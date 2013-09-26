@@ -201,7 +201,7 @@ qx.Class.define("qx.ui.mobile.form.Slider",
      */
     _createKnobElement : function()
     {
-      return new qx.module.ui.Widget.create("<div>");
+      return new qx.ui.website.Widget.create("<div>");
     },
 
 

@@ -260,7 +260,7 @@ qx.Class.define("qx.ui.mobile.form.renderer.Single",
       qx.bom.element.Class.add(errorNode, 'form-element-error');
       qx.dom.Element.insertAfter(errorNode, item.getLayoutParent().getContainerElement());
 =======
-      var errorNode = new qx.module.ui.Widget.create('<div>');
+      var errorNode = new qx.ui.website.Widget.create('<div>');
       errorNode.setHtml(item.getInvalidMessage());
       errorNode.addClass('form-element-error');
 

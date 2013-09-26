@@ -666,7 +666,7 @@ qx.Class.define("qx.ui.mobile.core.Widget",
     * @return {Element} the container element.
     */
     _createContainerElement : function() {
-      return qx.module.ui.Widget.create("<" + this._getTagName() + ">");
+      return qx.ui.website.Widget.create("<" + this._getTagName() + ">");
     },
 
 
