@@ -41,23 +41,14 @@ qx.Class.define("mobileshowcase.page.ThemeSwitcher",
     this.setBackButtonText("Back");
     this.__themes = [{
         "name": "Indigo",
-        "css": "qx/mobile/css/indigo.css"
+        "css": "../../../framework/source/resource/qx/mobile/css/indigo.css"
       }
     ];
 
-    if (qx.core.Environment.get("os.name") != "android") {
-      this.__themes.push({
-        "name": "iOS",
-        "css": "qx/mobile/css/ios.css"
-      });
-    }
-
-    if (qx.core.Environment.get("os.name") != "ios") {
-      this.__themes.push({
-        "name": "Android",
-        "css": "qx/mobile/css/android.css"
-      });
-    }
+    this.__themes.push({
+      "name": "Flat",
+      "css": "../../../framework/source/resource/qx/mobile/css/flat.css"
+    });
 
     this.__preloadThemes();
   },

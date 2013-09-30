@@ -222,14 +222,14 @@ qx.Class.define("qx.ui.mobile.form.ToggleButton",
      */
     _onSwipe : function(evt)
     {
-      if(this._checkLastTouchTime()) {
+      if (this._checkLastTouchTime()) {
         var direction = evt.getDirection();
-        if(direction == "left") {
-          if(this.__value == true) {
+        if (direction == "left") {
+          if (this.__value == true) {
             this.toggle();
           }
         } else {
-          if(this.__value == false) {
+          if (this.__value == false) {
             this.toggle();
           }
         }
@@ -261,6 +261,6 @@ qx.Class.define("qx.ui.mobile.form.ToggleButton",
     this.removeListener("tap", this._onTap, this);
     this.removeListener("swipe", this._onSwipe, this);
 
-    this._disposeObjects("__switch","__labelUnchecked","__labelChecked", "__fontSize");
+    this._disposeObjects("__switch","__labelUnchecked","__labelChecked");
   }
 });

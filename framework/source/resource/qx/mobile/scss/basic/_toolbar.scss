@@ -3,35 +3,46 @@
 //
 
 .toolbar-button {
-  @extend .standard-button;
+  @extend .button;
   @extend .hbox;
   @include background-clip(padding-box);
+  @include background($toolbar-background);
+  @include border-radius($toolbar-border-radius); 
+
+  color: $toolbar-text-color;
+  border: rem(1) solid $toolbar-border-color;
+
   cursor: pointer;
-  font-weight: bold;
+  font-weight: $toolbar-font-weight;
   
   width:0;
 
-  $padding:4px;
-  padding-left:$padding;
-  padding-right:$padding;
+  padding-left: rem(4);
+  padding-right: rem(4);
   
   overflow: hidden;
   
-  font-size: 12px;
-  
   line-height:normal;
+
+  height: 100%;
+}
+
+.toolbar-button.active {
+  @include background($toolbar-active-background); 
+  color: $toolbar-active-text-color;
 }
 
 .toolbar-separator {
-  width: 4px;
+  width: rem(4);
 }
 
 .toolbar {
-  z-index: 1;
-  padding: 2px;
-  height: 55px;
-  height: -moz-calc(55px + 4px);
   @include box-align(stretch);
+  
+  z-index: 1;
+  padding: rem(2);
+  height: rem(50);
+  height: -moz-calc(rem(50) + rem(4));
 }
 
 .toolbar-button img {
@@ -44,16 +55,16 @@
 
 .toolbar-button .label {
   height: auto;
-  padding-top:2px;
+  padding-top:rem(2);
   text-align:center;
   // For displaying ellipsis correctly.
   max-width:100%;
 }
 
 .toolbar-separator {
-  width: 5px;
+  width: rem(5);
 }
 
 .list-itemimage {
-  margin-right: 7px;
+  margin-right: rem(8);
 }

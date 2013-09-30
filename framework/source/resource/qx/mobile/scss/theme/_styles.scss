@@ -4,227 +4,242 @@
 // Modify the values for customizing your theme 
 // and run the qooxdoo generator job 'watch-scss' 
 
+// Theme
+
+$foreground-color: #222;
+$background-color: white;
+$highlight-color: #3D72C9;
+
+$color-1: mix($foreground-color, $background-color, 90%); 
+$color-2: mix($foreground-color, $background-color, 70%);
+$color-3: mix($foreground-color, $background-color, 50%);
+$color-4: mix($foreground-color, $background-color, 30%);
+$color-5: mix($foreground-color, $background-color, 10%);
+
 // Application
 
-$application-font:  "Segoe UI", "Slate Pro", sans-serif, Helvetica;
-$application-text-color:  black;
+$application-font:  "Segoe UI","Slate Pro",sans-serif,Helvetica;
+$application-text-color:  $foreground-color;
+$application-font-size:  100%;
 
 // Page
 
-$navigationpage-background-color: #F4F4F4;
-$navigationpage-border-color: #DDDDDD;
+$navigationpage-background-color: $color-5;
+$navigationpage-border-color: $color-4;
 
 // NavigationBar
 
-$navigationbar-background-color:  lighten(#323335, 10%);
-$navigationbar-background-color-2:  darken($navigationbar-background-color, 20%);
-$navigationbar-text-color:  white;
-$navigationbar-height:  45px;
+$navigationbar-height:  rem(40);
+$navigationbar-background:  $color-2,$color-1;
+$navigationbar-text-size:  $navigationbar-height/2;
+$navigationbar-text-color:  $background-color;
+$navigationbar-padding:  rem(4);
+$navigationbar-font-weight: bold;
 
 // NavigationBar Button
  
-$navigationbarbutton-border-radius:  4px;
-$navigationbarbutton-background-color:  lighten(#F4F4F4,10%);
-$navigationbarbutton-background-color-2:  darken(#F4F4F4,20%);
-$navigationbarbutton-border-color:  #888888;
-$navigationbarbutton-text-color:  #333333;
-$navigationbarbutton-active-background-color:  lighten(#3D72C9,20%);
-$navigationbarbutton-active-background-color-2:  #3D72C9;
-$navigationbarbutton-active-text-color:  white;
-$navigationbarbutton-active-border-color:  white;
- 
+$navigationbarbutton-border-radius:  rem(4);
+$navigationbarbutton-background:  $background-color,$color-4;
+$navigationbarbutton-border-color:  $color-2;
+$navigationbarbutton-text-color:  $color-1;
+$navigationbarbutton-active-background:  lighten($highlight-color,20%),$highlight-color;
+$navigationbarbutton-active-text-color:  $background-color;
+$navigationbarbutton-active-border-color:  $background-color;
+$navigationbarbutton-font-weight: bold;
+
 // Dialog
 
-$dialog-border-color: #3D72C9; 
-$dialog-background-color: #323335;
-$dialog-border-radius: 4px;
-$dialog-title-text-color: white;
+$dialog-border-color: $highlight-color; 
+$dialog-background:  $color-2,$color-1 50%,$color-1;
+$dialog-arrow-up-color:  $color-2;
+$dialog-arrow-down-color:  $color-1;
+$dialog-border-radius: rem(4);
+$dialog-title-text-color: $background-color;
+$dialog-font-weight: bold;
 
 // Group
 
-$group-background-color:  white;
-$group-border-color:  #DDDDDD;
-$group-title-text-color:  #3D72C9;
-$group-border-radius: 4px;
+$group-background-color:  $background-color;
+$group-border-color:  $color-4;
+$group-title-text-color:  $highlight-color;
+$group-border-radius: rem(4);
 
 // List
 
-$list-background-color: white;
-$list-title-text-color: #333333;
-$list-subtitle-text-color:  #3D72C9;
-$list-border-color: #DDDDDD;
-$list-active-background-color:  lighten(#3D72C9, 20%);
-$list-active-background-color-2:  darken($list-active-background-color, 20%);
-$list-active-text-color:  white;
-$list-border-radius:  4px;
-$list-arrow-size: 3px;
-$list-arrow-thickness: 2px;
-$list-arrow-color: gray;
-$list-active-arrow-color: white;
+$list-background-color: $background-color;
+$list-title-text-color: $color-1;
+$list-title-font-size: rem(17);
+$list-title-font-weight: bold;
+$list-subtitle-text-color:  $highlight-color;
+$list-subtitle-font-size: rem(14);
+$list-border-color: $color-4;
+$list-active-background:  lighten($highlight-color,20%),$highlight-color;
+$list-active-text-color:  $background-color;
+$list-border-radius:  rem(4);
+$list-arrow-size: rem(3);
+$list-arrow-thickness: rem(2);
+$list-arrow-color: $color-1;
+$list-active-arrow-color: $background-color;
 
 // Form
 
-$form-background-color:  white;
-$form-title-text-color:  #3D72C9;
-$form-label-text-color:  #333333;
-$form-border-color:  #DDDDDD;
-$form-border-radius:  4px;
+$form-background-color:  $background-color;
+$form-title-text-color:  $highlight-color;
+$form-label-text-color:  $color-1;
+$form-border-color:  $color-4;
+$form-border-radius:  rem(4);
+$form-font-weight: bold;
 
 // Input
 
-$input-text-color:  #333333;
-$input-border-radius: 4px;
-$input-border-color: #DDDDDD;
+$input-text-color:  $color-1;
+$input-background-color:  $background-color;
+$input-border-radius: rem(4);
+$input-border-color: $color-4;
 $input-invalid-border-color: red;
 
 // Checkbox
 
-$checkbox-tick-color: #3D72C9;
-$checkbox-border-radius:  0.1em;
-$checkbox-border-color:  #888888;
-$checkbox-background-color: darken(#F4F4F4, 20%); 
-$checkbox-background-color-2: lighten($checkbox-background-color, 20%); 
+$checkbox-size:  rem(30);
+$checkbox-tick-color: $highlight-color;
+$checkbox-tick-size:  rem(14);
+$checkbox-tick-width:  rem(4);
+$checkbox-border-radius:  rem(1);
+$checkbox-border-color:  $color-2;
+$checkbox-background: $color-4,$background-color; 
 
 // RadioButton
 
-$radiobutton-dot-color: #3D72C9;
-$radiobutton-background-color: darken(#F4F4F4, 20%);
-$radiobutton-background-color-2: lighten($radiobutton-background-color, 20%);
-$radiobutton-border-color: #888888;
+$radiobutton-size: rem(32);
+$radiobutton-dot-color: $highlight-color;
+$radiobutton-background: $color-4,$background-color;
+$radiobutton-border-color: $color-2;
 
 // Tabbar
 
-$tabbar-height:  45px;
-$tabbar-active-background-color:  lighten(#3D72C9, 20%);
-$tabbar-active-background-color-2:  darken($tabbar-active-background-color,  20%);
-$tabbar-active-border-color:  lighten($tabbar-active-background-color-2, 20%);
-$tabbar-inactive-background-color:  lighten(#808080, 5%);
-$tabbar-inactive-background-color-2:  darken($tabbar-inactive-background-color, 15%);
-$tabbar-inactive-border-color:  lighten($tabbar-inactive-background-color, 20%);
-$tabbar-active-text-color:  white;
-$tabbar-inactive-text-color:  white;
-$tabbar-border-radius:  4px;
-$tabbar-button-distance:  4px;
+$tabbar-height:  rem(45);
+$tabbar-divider-color:  $highlight-color;
+$tabbar-active-background:  lighten($highlight-color,20%),$highlight-color;
+$tabbar-active-border-color:  $highlight-color;
+$tabbar-inactive-background:  $color-3,$color-2;
+$tabbar-inactive-border-color:  $color-3;
+$tabbar-active-text-color:  $background-color;
+$tabbar-inactive-text-color:  $background-color;
+$tabbar-border-radius:  rem(4);
+$tabbar-button-distance:  rem(4);
 
 // ToggleButton
 
-$togglebutton-width:  95px;
-$togglebutton-height:  30px;
-$togglebutton-border-radius:  4px;
-$togglebutton-border-color:  #9e9e9e;
-$togglebutton-text-color:  #666666; 
-$togglebutton-background-color:  darken(white,10%);
-$togglebutton-background-color-2:  white;
-$togglebutton-active-background-color:  darken(#3D72C9,10%);
-$togglebutton-active-background-color-2:  #3D72C9;
-$togglebutton-knob-background-color:  #cfcfcf;
-$togglebutton-knob-background-color-2:  #fdfdfd;
-$togglebutton-knob-width:  30px;
-$togglebutton-active-text-color:  white;
+$togglebutton-width:  rem(100);
+$togglebutton-height:  rem(30);
+$togglebutton-border-radius:  rem(4);
+$togglebutton-border-color:  $color-2;;
+$togglebutton-text-color:  $color-1; 
+$togglebutton-background:  $color-5,$background-color;
+$togglebutton-active-background:  $highlight-color,lighten($highlight-color,20%);
+$togglebutton-knob-background:  $background-color,$color-4;
+$togglebutton-knob-width: rem(30);
+$togglebutton-active-text-color:  $background-color;
 $togglebutton-inset-shadow:  rgba(0,0,0,0.1);
 $togglebutton-knob-shadow:  rgba(0,0,0,0.4);
+$togglebutton-font-size: rem(13);
+$togglebutton-font-weight: bold;
 
 // Carousel
 
-$carousel-pagination-background-color: white;
-$carousel-pagination-active-background-color: #3D72C9;
-$carousel-pagination-border-radius: 15px;
+$carousel-pagination-size: rem(8);
+$carousel-pagination-background-color: $background-color;
+$carousel-pagination-active-background-color: $highlight-color;
+$carousel-pagination-border-radius: $carousel-pagination-size;
+$carousel-pagination-font-size: 1px;
+$carousel-pagination-font-color: rgba(0,0,0,0);
 
 // Button
 
-$button-text-color:  #333333;
-$button-active-text-color:  white;
-$button-border-radius:  4px;
-$button-border-color:  #888888;
-$button-active-border-color:  #888888;
-$button-background-color:  lighten(#F4F4F4, 40%);
-$button-background-color-2:  darken($button-background-color, 20%);
-$button-active-background-color:  lighten(#3D72C9, 20%);
-$button-active-background-color-2:  darken($button-active-background-color, 20%);
+$button-text-color:  $color-1;
+$button-font-size: rem(15);
+$button-font-weight: bold;
+$button-active-text-color:  $background-color;
+$button-border-radius:  rem(4);
+$button-border-color:  $color-2;
+$button-active-border-color:  $color-2;
+$button-background:  $background-color,$color-4;
+$button-active-background:  lighten($highlight-color,20%),$highlight-color;
 
 // SelectBox
 
-$selectbox-border-radius: 4px;
-$selectbox-border-color:  #9e9e9e; 
-$selectbox-text-color:  #333333;
-$selectbox-background-color:  lighten(#F4F4F4,20%);
-$selectbox-background-color-2:  darken($selectbox-background-color,30%);
-$selectbox-active-background-color:  lighten(#3D72C9, 20%);
-$selectbox-active-background-color-2:  darken($selectbox-active-background-color, 30%);
-$selectbox-active-text-color:  white;
-$selectbox-item-selected-text-color:  white;
-$selectbox-item-selected-background-color:  #3D72C9;
+$selectbox-border-radius: rem(4);
+$selectbox-border-color:  $color-2;; 
+$selectbox-text-color:  $color-1;
+$selectbox-background:  $background-color,$color-4;
+$selectbox-active-background:  $highlight-color;
+$selectbox-active-text-color:  $background-color;
+$selectbox-item-selected-text-color:  $background-color;
+$selectbox-item-selected-background:  $highlight-color;
 
 // Slider
 
-$slider-height: 10px;
-$slider-background-color:  darken(white,10%);
-$slider-background-color-2:  white;
-$slider-active-area-color:  lighten(#3D72C9,10%);
-$slider-active-area-color-2:  #3D72C9;
-$slider-border-radius:  20px; 
-$slider-border-color:  #9e9e9e;
-$slider-knob-border-radius: 4px;
-$slider-knob-width: 30px;
-$slider-knob-height: 30px;
-$slider-knob-color:  #cfcfcf;
-$slider-knob-color-2:  #fdfdfd;
-$slider-knob-border-color:  #9e9e9e;
+$slider-height: rem(7);
+$slider-background:  $color-4,$background-color;
+$slider-active-area:  lighten($highlight-color,20%),$highlight-color;
+$slider-border-radius:  rem(20); 
+$slider-border-color:  $color-2;;
+$slider-knob-border-radius: rem(4);
+$slider-knob-width: rem(30);
+$slider-knob-height: rem(30);
+$slider-knob-background:  $background-color,$color-4;
+$slider-knob-border-color:  $color-2;;
 $slider-shadow: rgba(0,0,0,0.4);
-$slider-font-size:  0.8em;
-$slider-font-color:  #888;
+$slider-font-color:  $color-2;;
 
 // Toolbar  
 
-$toolbar-text-color:  #333333;
-$toolbar-background-color:  lighten(#F4F4F4, 10%);
-$toolbar-background-color-2:  darken($toolbar-background-color, 20%);
-$toolbar-active-background-color:  lighten(#3D72C9, 20%);
-$toolbar-active-background-color-2:  darken($toolbar-active-background-color, 20%);
-$toolbar-active-text-color:  white;
-$toolbar-border-color:  #999;
-$toolbar-border-radius: 4px;
+$toolbar-text-color:  $color-1;
+$toolbar-background:  $background-color,$color-3;
+$toolbar-active-background:  lighten($highlight-color,20%),$highlight-color;
+$toolbar-active-text-color:  $background-color;
+$toolbar-border-color:  $color-2;
+$toolbar-border-radius: rem(4);
+$toolbar-font-weight: bold;
 
 // Menu
 
-$menu-item-selected-text-color:  white;
-$menu-item-selected-background-color:  #3D72C9;
+$menu-item-selected-text-color:  $background-color;
+$menu-item-selected-background:  lighten($highlight-color, 20%), $highlight-color;
 
 // Picker 
 
-$picker-spinning-wheel-overlay-color-1:  rgba(#F4F4F4, 1);
-$picker-spinning-wheel-overlay-color-2: rgba(#F4F4F4, 0);
-$picker-spinning-wheel-text-color:  #333333; 
-$picker-spinning-wheel-background-color:  #F4F4F4;
-$picker-highlight-color:  rgba(#3D72C9, 0.5);
-$picker-highlight-border-width:  2px;
-$picker-spinning-wheel-border-radius:  4px;
-$picker-spinning-wheel-divider-color:  #888;
-$picker-spinning-wheel-divider-width:  2px;
-$picker-label-height: 25px;
-$picker-height: 150px;
+$picker-spinning-wheel-overlay:  rgba($color-5,1),rgba($color-5,0) 40%,rgba($color-5,0) 60%,rgba($color-5,1);
+$picker-spinning-wheel-text-color:  $color-1; 
+$picker-spinning-wheel-background-color:  $color-5;
+$picker-highlight-color:  rgba($highlight-color,0.5);
+$picker-highlight-border-width:  rem(2);
+$picker-spinning-wheel-border-radius:  rem(4);
+$picker-spinning-wheel-divider-color:  $color-2;
+$picker-spinning-wheel-divider-width:  rem(2);
+$picker-label-height: rem(25);
+$picker-label-font-size: rem(16);
+$picker-height: rem(160);
 
 // Drawer
 
-$drawer-border-color:  #45484d; 
-$drawer-above-background-color:  #F4F4F4;
-$drawer-below-background-color:  #808080;
+$drawer-border-color:  $color-1; 
+$drawer-above-background-color:  $color-5;
+$drawer-below-background-color:  $color-2;
 
 // Collapsible
 
-$collapsible-border-radius: 4px;
-$collapsible-header-border-color: #888888;
-$collapsible-header-text-color: #333333;
-$collapsible-header-active-text-color: white;
-$collapsible-header-background-color: lighten(#F4F4F4, 10%);
-$collapsible-header-background-color-2: darken($collapsible-header-background-color, 20%);
-$collapsible-header-active-background-color: lighten(#3D72C9, 10%);
-$collapsible-header-active-background-color-2: darken($collapsible-header-active-background-color, 20%);
-$collapsible-header-padding: 10px;
-$collapsible-header-content-distance: 10px;
-$collapsible-content-border-color: #DDDDDD;
-$collapsible-content-padding: 10px;
-$collapsible-content-background-color:  white;
-$collapsible-arrow-size:  8px;
-$collapsible-arrow-color:  #333333;
-$collapsible-active-arrow-color: white;
+$collapsible-border-radius:  rem(4);
+$collapsible-header-border-color:  $color-2;
+$collapsible-header-text-color:  $color-1;
+$collapsible-header-active-text-color: $background-color;
+$collapsible-header-background:  $background-color,$color-3;
+$collapsible-header-active-background:  lighten($highlight-color,20%),$highlight-color;
+$collapsible-header-padding:  rem(10);
+$collapsible-header-content-distance:  rem(10);
+$collapsible-content-border-color:  $color-4;
+$collapsible-content-padding:  rem(10);
+$collapsible-content-background-color:  $background-color;
+$collapsible-arrow-size:  rem(8);
+$collapsible-arrow-color:  $color-1;
+$collapsible-active-arrow-color:  $background-color;
