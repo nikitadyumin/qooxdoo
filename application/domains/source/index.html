@@ -3,7 +3,13 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>domains</title>
+  <script type='text/javascript' src='fastclick.min.js'></script>
   <script type="text/javascript" src="script/domains.js"></script>
+  <script type="text/javascript">
+    function initFastclick() {
+      FastClick.attach(document.body);
+    }
+  </script>
   <link rel="stylesheet" type="text/css" href="../../../framework/source/resource/qx/website/css/indigo.css"/>
 
   <style type="text/css" media="screen">
@@ -41,7 +47,7 @@
     }
   </style>
 </head>
-<body>
+<body onload="initFastclick()">
   <div id="desktop" style="width: 100%; height: 51px;"></div>
 
   <div id="toolbar" style="display: none">
